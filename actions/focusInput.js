@@ -1,0 +1,1 @@
+export const focusInput = () => mainInput[0].focus();
