@@ -24,12 +24,14 @@ form{
 #mainInput>input, #selectBranch {
   border: none;
   outline: none;
-  margin: 0 auto;
-  margin: 10px;
-  padding: 15px;
+  padding: 8px;
+  margin: 15px auto;
   font-size: 25px;
   background-color: wheat;
   width: 97%;
+}
+#mainInput>input::placeholder {
+ opacity: .4;
 }
 #selectBranch{
   width: fit-content;
@@ -38,7 +40,7 @@ form{
 
 .borderDone{
   border: 3px solid rgba(37, 196, 37, 0.61);
- 
+  transition: .1s;
 }
 .borderDone input{
   color: rgb(39, 170, 39);
@@ -52,10 +54,14 @@ form{
   min-width: 300px;
   width: 25vw;
   padding: 10px;
-  border: none;
+  border:3px solid  transparent;
   outline: none;
   border-radius: 10px;
   font-size: 16px;
   background-color: wheat;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.386);
+}
+.borderCoped{
+  border: 3px solid rgba(37, 196, 37, 0.61) !important; 
+  transition: .5s;
 }
