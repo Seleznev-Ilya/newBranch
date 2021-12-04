@@ -6,7 +6,7 @@ export const addOptionsToMain = () => {
   const store = api.getStore();
   containerHistory.innerHTML = createOptions(store);
   store.length
-    ? mainPlaceholder.setPlaceholder(store[0])
+    ? mainPlaceholder.setPlaceholder(store[0], true)
     : mainPlaceholder.setPlaceholder(
         "Paste Jira task as: https://project/task ..."
       );

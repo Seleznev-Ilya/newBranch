@@ -5,10 +5,14 @@ import { focusInput } from "./components/utils/focusInput.js";
 import { getHistoryBranch } from "./components/select_history/getHistoryBranch.js";
 import { copyText } from "./components/input_main/copyText.js";
 import { getSelectTag } from "./components/select_tag/getSelectTag.js";
-
-document.addEventListener("DOMContentLoaded", addOptionsToMain);
-document.addEventListener("DOMContentLoaded", addOptionToTagSelect);
-document.addEventListener("DOMContentLoaded", focusInput);
+import { getEmail } from "./components/getEmail.js";
+document.addEventListener(
+  "DOMContentLoaded",
+  () => addOptionsToMain(),
+  addOptionToTagSelect(),
+  focusInput()
+);
 mainInput.addEventListener("submit", copyText);
-containerHistory.addEventListener('change', getHistoryBranch )
+email.addEventListener("click", getEmail);
+containerHistory.addEventListener("change", getHistoryBranch);
 selectBranch.addEventListener("change", getSelectTag);

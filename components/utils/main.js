@@ -1,6 +1,10 @@
 export const mainPlaceholder = {
-  setPlaceholder(value) {
-    mainInput[0].placeholder = value + " ░";
+  setPlaceholder(value, type = false) {
+    if (type) {
+      mainInput[0].placeholder = value + " ⣿ saved ";
+    } else {
+      mainInput[0].placeholder = value + " ❐ copied ";
+    }
   },
   cleanPlaceholder() {
     mainInput[0].placeholder = "";

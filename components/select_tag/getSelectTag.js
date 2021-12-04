@@ -3,7 +3,8 @@ import { apiTags } from "../../service/store.js";
 import { addOptionToTagSelect } from "./addOptionToTagSelect.js";
 import { actionBorder } from "../utils/actionBorder.js";
 export const getSelectTag = () => {
-  apiTags.resetItemToStart(selectBranch.value);
+  const str = selectBranch.value;
+  apiTags.resetItemToStart(str);
   addOptionToTagSelect();
   actionBorder("borderDone");
   focusInput();

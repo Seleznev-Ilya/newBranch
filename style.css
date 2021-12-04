@@ -1,13 +1,14 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 body {
   background-color: blanchedalmond;
 }
-form{
+form {
   width: 100%;
 }
 .container {
+  position: relative;
   margin: 0 auto;
   display: flex;
   min-width: 50%;
@@ -21,7 +22,8 @@ form{
   border: 3px solid transparent;
 }
 
-#mainInput>input, #selectBranch {
+#mainInput > input,
+#selectBranch {
   border: none;
   outline: none;
   padding: 8px;
@@ -30,38 +32,48 @@ form{
   background-color: wheat;
   width: 97%;
 }
-#mainInput>input::placeholder {
- opacity: .4;
+#mainInput > input::placeholder {
+  opacity: 0.4;
 }
-#selectBranch{
+#selectBranch {
+  cursor: pointer;
   width: fit-content;
   font-size: 15px;
 }
 
-.borderDone{
+.borderDone {
   border: 3px solid rgba(37, 196, 37, 0.61);
-  transition: .1s;
+  transition: 0.1s;
 }
-.borderDone input{
+.borderDone input {
   color: rgb(39, 170, 39);
 }
-.selectContainer{
+.selectContainer {
   margin: 25px auto;
   width: fit-content;
 }
-#containerHistory{
+#containerHistory {
+  cursor: pointer;
   margin: 0 auto;
   min-width: 300px;
   width: 25vw;
   padding: 10px;
-  border:3px solid  transparent;
+  border: 3px solid transparent;
   outline: none;
   border-radius: 10px;
   font-size: 16px;
   background-color: wheat;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.386);
 }
-.borderCoped{
-  border: 3px solid rgba(37, 196, 37, 0.61) !important; 
-  transition: .5s;
+.borderCoped {
+  border: 3px solid rgba(37, 196, 37, 0.61) !important;
+  transition: 0.5s;
+}
+#email{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  height: 30px; 
+  cursor: pointer;
+  background-color: wheat;
 }
