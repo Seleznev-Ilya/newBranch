@@ -1,5 +1,5 @@
-import { actionBorder } from "./utils/actionBorder.js";
-import { mainPlaceholder } from "./utils/main.js";
+import { actionBorder } from "./actionBorder.js";
+import { mainPlaceholder } from "./main.js";
 
 export const getEmail = () => {
   const email = "illia.selieznov@wunderkind.co";

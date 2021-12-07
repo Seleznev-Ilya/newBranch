@@ -5,7 +5,7 @@ import { focusInput } from "./components/utils/focusInput.js";
 import { getHistoryBranch } from "./components/select_history/getHistoryBranch.js";
 import { copyText } from "./components/input_main/copyText.js";
 import { getSelectTag } from "./components/select_tag/getSelectTag.js";
-import { getEmail } from "./components/getEmail.js";
+import { getEmail } from "./components/utils/getEmail.js";
 document.addEventListener(
   "DOMContentLoaded",
   () => addOptionsToMain(),
