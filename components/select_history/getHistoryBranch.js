@@ -4,12 +4,15 @@ import { actionBorder } from "../utils/actionBorder.js";
 import { mainPlaceholder } from "../utils/main.js";
 
 export const getHistoryBranch = () => {
+  const isBranchName = branchName.checked;
   let lastBranch =
     containerHistory.options[containerHistory.selectedIndex].label;
-  mainInput.value = lastBranch;
-  navigator.clipboard.writeText(lastBranch);
-  actionBorder("borderDone", true);
-  api.resetItemToStart(lastBranch);
+  const toCopyBranchName = `git checkout -b feature/${lastBranch}`;
+
+  navigator.clipboard.writeText(isBranchName ? toCopyBranchName : lastBranch);
+
+  // api.setItemToStart(lastBranch);
   addOptionsToMain();
+  actionBorder("borderDone", true);
   mainPlaceholder.setPlaceholder(lastBranch, false);
 };

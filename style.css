@@ -49,15 +49,21 @@ form {
   color: rgb(39, 170, 39);
 }
 .selectContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
   margin: 25px auto;
-  width: fit-content;
+}
+#branchName{
+  height: 22px;
+  width: 22px;
 }
 #containerHistory {
   cursor: pointer;
-  margin: 0 auto;
   min-width: 300px;
-  width: 25vw;
-  padding: 10px;
+  width: 70%;
+  padding: 15px;
   border: 3px solid transparent;
   outline: none;
   border-radius: 10px;
@@ -69,11 +75,11 @@ form {
   border: 3px solid rgba(37, 196, 37, 0.61) !important;
   transition: 0.5s;
 }
-#email{
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  height: 30px; 
+#email {
+  /* position: absolute; */
+  /* top: 5px;
+  right: 10px; */
+  height: 30px;
   cursor: pointer;
   background-color: wheat;
 }

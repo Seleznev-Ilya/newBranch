@@ -21,7 +21,7 @@ export const api = {
   deleteStoreItem(string) {
     this.setStore(this.getStore().filter((item) => string !== item));
   },
-  resetItemToStart(item) {
+  setItemToStart(item) {
     this.deleteStoreItem(item);
     this.setStore([item, ...this.getStore()]);
   },

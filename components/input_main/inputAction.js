@@ -8,18 +8,17 @@ export const inputAction = () => {
   const str = main.getInput();
   if (~str.indexOf("https://")) {
     const urlData = getTagFromUrl(str);
-    main.setInput(urlData.number + " ");
+    main.setInput(urlData.gitString[0]);
     apiTags.resetItemToStart(urlData.tag);
+
     addOptionToTagSelect();
   } else {
-    const cleanStr = excludeSymbols(str);
-    const result =
-      selectBranch.value +
-      "-" +
-      cleanStr.trim().split(" ").join("-").slice(0, 1).toUpperCase() +
-      cleanStr.trim().split(" ").join("-").slice(1);
+    const taskNumber = excludeSymbols(str);
+    const tag = selectBranch.value;
+    const result = `${tag}-${taskNumber}`;
+
     navigator.clipboard.writeText(result);
-    api.resetItemToStart(result);
+    api.setItemToStart(result);
     main.cleanInput();
   }
 };

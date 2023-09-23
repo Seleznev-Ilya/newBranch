@@ -10,10 +10,7 @@
 </head>
 
 <body>
-    <button id="email">illia.selieznov@wunderkind.co</button>
-    <a href="https://us04web.zoom.us/j/9869331732?pwd=RDgxNU5NZkxUV0haMVdqdytWWDU2dz09" target="_blank">
-        <button id="meeting">meeting</button>
-    </a>
+    <!-- <button id="email">Get mail</button> //TODO: get email -->
     <div class="container">
         <select name="tag" id="selectBranch">
         </select>
@@ -22,7 +19,11 @@
         </form>
     </div>
     <div class="selectContainer">
-        <select name="history" id="containerHistory">
+        <input id="branchName" name="branchName" checked title="add feature/ to task" type="checkbox">
+        <label for="branchName">
+            : To create new branch
+        </label>
+        <select name="history" onfocus="this.selectedIndex = -1;" id="containerHistory">
         </select>
     </div>
     <script type="module" src="./script.js"></script>

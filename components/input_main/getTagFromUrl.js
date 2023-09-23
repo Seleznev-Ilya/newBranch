@@ -3,6 +3,7 @@ export const getTagFromUrl = (urlString) => {
   const dash = url.indexOf("-");
   const arrName = [];
   const number = [];
+
   for (let i = dash - 1; i > 0; i--) {
     const item = url[i];
     if (item !== item.toLowerCase()) {
@@ -11,6 +12,7 @@ export const getTagFromUrl = (urlString) => {
     }
     break;
   }
+
   for (let i = dash + 1; i < url.length; i++) {
     const item = url[i];
     if (item.match(/\d+/) ?? false) {
@@ -21,6 +23,7 @@ export const getTagFromUrl = (urlString) => {
     }
     continue;
   }
+
   return {
     gitString: [`${arrName.join("")}-${number.join("")}`],
     tag: arrName.join(""),
