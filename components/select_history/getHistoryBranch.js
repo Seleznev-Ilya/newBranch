@@ -6,9 +6,10 @@ import { mainPlaceholder } from "../utils/main.js";
 
 export const getHistoryBranch = () => {
   const isBranchName = branchName.checked;
+  const isFixPrefix = fixPrefix.checked;
   let lastBranch =
     containerHistory.options[containerHistory.selectedIndex].label;
-  const toCopyBranchName = `git checkout -b clean/feature/${lastBranch}`;
+  const toCopyBranchName = `git checkout -b clean/${ isFixPrefix ? 'fix' : 'feature' }/${ lastBranch }`;
 
   navigator.clipboard.writeText(isBranchName ? toCopyBranchName : lastBranch);
 
