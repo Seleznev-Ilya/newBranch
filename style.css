@@ -59,6 +59,10 @@ form {
   height: 22px;
   width: 22px;
 }
+#fixPrefix{
+  height: 22px;
+  width: 22px;
+}
 #containerHistory {
   cursor: pointer;
   min-width: 300px;
