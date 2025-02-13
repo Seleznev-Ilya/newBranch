@@ -21,7 +21,10 @@ form {
   background-color: wheat;
   border: 3px solid transparent;
 }
-
+.checkboxWrapper{
+  display: flex;
+  flex-direction: column;
+}
 #mainInput > input,
 #selectBranch {
   border: none;
