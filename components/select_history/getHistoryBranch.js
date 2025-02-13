@@ -8,7 +8,7 @@ export const getHistoryBranch = () => {
   const isBranchName = branchName.checked;
   let lastBranch =
     containerHistory.options[containerHistory.selectedIndex].label;
-  const toCopyBranchName = `git checkout -b feature/${lastBranch}`;
+  const toCopyBranchName = `git checkout -b clean/feature/${lastBranch}`;
 
   navigator.clipboard.writeText(isBranchName ? toCopyBranchName : lastBranch);
 
